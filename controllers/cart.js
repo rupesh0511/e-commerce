@@ -13,7 +13,7 @@ const createCart = async (req, res) => {
     const productsToAdd = [];
     for (let i = 0; i < req.body.products.length; i++) {
       const currentProduct = req.body.products[i];
-      const { price } = await ProductModel.findById(currentProduct.productId, {
+      const { price } = await ProductModel.findById(currentProduct.productId,{
         price: 1,
         _id: 0,
       });

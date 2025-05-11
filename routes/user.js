@@ -10,6 +10,6 @@ router.post("/login",userController.userLogin);
 router.post("/logout",userController.userLogout);
 router.post("/add-to-wishlist",authmiddleware(["buyer", "seller", "admin"]),userController.wishlist);
 router.get("/getwishlist",authmiddleware(["buyer", "seller", "admin"]),userController.getwishlist);
-router.post("/address",authmiddleware(["buyer", "seller", "admin"]),userController.saveaddress);
+router.post("/address",authmiddleware(["buyer", "seller", "admin"]),userController.saveaddress); 
 
 module.exports = router;
